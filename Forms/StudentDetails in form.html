@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentDetails</title>
+    <style>
+        button
+            {
+                background-color: orangered;
+                color: white;
+                border-radius: 0px 50px;
+            }
+        form
+            {
+                background-color: aquamarine;
+                color:black;
+
+            }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>StudentDetails</legend>
+            <table>
+                <tr>
+                    <td><label>StudentName</label></td>
+                    <td><input type="text" placeholder="Enter name"></td>
+                    <td><label>FatherName</label></td>
+                    <td><input type="text" placeholder="Enter Fathername"></td>
+                    <td><label>MotherName</label></td>
+                    <td><input type="text" placeholder="Enter Mothername"></td>
+                </tr>
+                <tr>
+                    <td><label>DateOfBirth</label></td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <input type="radio" name="radio">Male
+                        <input type="radio" name="radio">Female
+                        <input type="radio" name="radio">Others
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Mobile no </label></td>
+                    <td><input type="number" placeholder="Enter mobile no"></td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" placeholder="Enter mail-id"></td>
+                </tr>
+                <tr>
+                    <td><label>Address</label></td>
+                    <td><textarea name="" id="" rows="10" cols="15"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>State</label></td>
+                    <td><select name="id">
+                        <option value="">Please select</option>
+                        <option value="">Tamilnadu</option>
+                        <option value="">Karnataka</option>
+                        <option value="">Andhra</option>
+                        <option value="">Odisa</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Language</label></td>
+                    <td>
+                        <input type="checkbox">Tamil<br>
+                        <input type="checkbox">English<br>
+                        <input type="checkbox">kanada<br>
+                        <input type="checkbox">Telugu<br>
+                        <input type="checkbox">Hindi<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Choose File</label></td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="6"><button>Submit</button></td>
+                    <td colspan="6"><button>Reset</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

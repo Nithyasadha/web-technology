@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons
+        {
+            height:100px;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .buttons>#play
+        {
+            background-color: green;
+            color:white;
+            padding:7px 20px;
+        }
+        .buttons>#stop
+        {
+            background-color: red;
+            color:white;
+            padding:7px 20px;
+        }
+        .buttons>#reset
+        {
+            background-color: blue;
+            color:white;
+            padding:7px 20px;
+        }
+        .boxes
+        {
+            display:grid;
+            grid-template-columns: repeat(10,auto);
+            gap:10px;
+            justify-content:center;
+        }
+        .box
+        {
+            height:70px;
+            width:70px;
+            border-radius: 5px;
+            box-shadow:0 0 5px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="play">PLAY</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <script>
+        let playBtn=document.getElementById("play")
+        let stopBtn=document.getElementById("stop")
+        let resetBtn=document.getElementById("reset")
+        let boxes=document.querySelectorAll(".box")
+        let count=0
+        let interval=null;
+        function generateRandomColor()
+        {
+            let red=Math.trunc(Math.random()*255)
+            let green=Math.trunc(Math.random()*255)
+            let blue=Math.trunc(Math.random()*255)
+            return `rgb(${red},${green},${blue})`
+
+        }
+        playBtn.addEventListener("click",()=>
+    {
+        if (interval==null)
+    {
+        interval=setInterval(()=>{
+            boxes[count].style.background=generateRandomColor()
+            count++
+            if(count>=boxes.length)
+        {
+            count=0
+            boxes.forEach(ele=>
+                {
+                    ele.style.background="white"
+                })
+        }
+        },100)
+    }
+       
+    })
+    stopBtn.addEventListener("click",()=>
+{
+    clearInterval(interval)
+    interval=null
+})
+resetBtn.addEventListener("click",()=>
+{
+    clearInterval(interval)
+    interval=null
+    boxes.forEach(ele=>{
+        ele.style.background="white"
+    })
+    count=0
+})
+
+
+</script>
+    
+</body>
+</html>

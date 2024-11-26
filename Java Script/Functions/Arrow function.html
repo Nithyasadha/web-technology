@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main()
+        {
+            let res=calc(10,5,sum);
+            console.log(res);
+        }
+        function calc(n1,n2,type)
+        {
+            let res=type(n1,n2);
+            return res;
+        }
+        function sum(a,b)
+        {
+            return a+b;
+        }
+        function mul(a,b)
+        {
+            return a*b;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="buttons">
+        <button id="all">ALL</button>
+        <button id="male">MALE</button>
+        <button id="female">FEMALE</button>
+    </div>
+    <table border="1" cellpadding="20" style="border-collapse: collapse;margin:20px;">
+        <thead>
+            <tr bgcolor="yellow">
+                <th>ID</th>
+                <th>NAME</th>
+                <th>GENDER</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody id="table-data"></tbody>
+    </table>
+    <div id="user-details">
+        <script>
+            const allBtn=document.getElementById("all")
+            const maleBtn=document.getElementById("male")
+            const femaleBtn=document.getElementById("female")
+            const users=[{name:"A",id:100,gender:"male",email:"a@gmail.com"},
+            {name:"B",id:101,gender:"male",email:"b@gmail.com"},
+            {name:"C",id:102,gender:"female",email:"c@gmail.com"},
+            {name:"D",id:103,gender:"male",email:"d@gmail.com"},
+            {name:"E",id:104,gender:"female",email:"e@gmail.com"},
+            {name:"F",id:105,gender:"female",email:"f@gmail.com"},
+            {name:"G",id:106,gender:"male",email:"g@gmail.com"},
+            {name:"H",id:107,gender:"female",email:"h@gmail.com"},
+            {name:"I",id:108,gender:"female",email:"i@gmail.com"}]
+            let tableBody=document.getElementById("table-data")
+            function displayData(arr)
+            {
+                let str=""
+                arr.forEach((ele) => {
+                  str+=`<tr onclick="showDetails(${ele.id})">
+                    <td>${ele.id}</td>
+                    <td>${ele.name}</td>
+                    <td>${ele.gender}</td>
+                    <td>${ele.email}</td>
+                </tr>`  
+                })
+                tableBody.innerHTML=str
+            }
+            displayData(users)
+            maleBtn.addEventListener("click",()=>
+        {
+            let maleUsers=users.filter((ele)=>
+        {
+            if(ele.gender=="male")
+        {
+            return ele
+        }
+        })
+        displayData(maleUsers)
+        })
+        femaleBtn.addEventListener("click",()=>
+    {
+        let femaleUsers=users.filter(ele=>ele.gender=="female")
+        displayData(femaleUsers)
+    })
+    allBtn.addEventListener("click",()=>
+    {
+        displayData(users)
+    })
+    function showDetails(id)
+    {
+        if(user.id==id)
+    {
+        return user
+    }
+    }
+    let str=""
+    for(let key in userDetails)
+    {
+        console.log(userDetails[key])
+    }
+    document.getElementById("user-details").innerHTML=str
+    
+        </script>
+    </div>
+</body>
+</html>

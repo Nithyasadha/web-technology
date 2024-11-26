@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script>
+        {
+            var a=10;
+            var b=20;
+            function sum(n1,n2)
+            {
+                console.log(arguments.length);
+                var res=0;
+                res=n1+n2;
+                return res;
+            }
+            let res_1=sum(a,b)
+            console.log("Result="+res_1);
+        }
+    </script>-->
+    <!--<script>
+        main();
+        function main()
+        {
+            let i=0;
+            let j=0;
+            j=m1(++i)+m1(i++);
+            console.log(i,j);
+        }
+        function m1(a)
+        {
+          return a++;
+        }
+    </script>-->
+    <script>
+        main();
+        function main()
+        {
+            sum(1,2);
+            sum(1,2,3);
+            sum(1,2,3,4);
+        }
+        function sum()
+        {
+            let add=0;
+            for (let i=0;i<arguments.length;i++)
+        {
+            add+=arguments[i];
+        }
+        console.log("sum="+add);
+        }
+        </script>
+    </head>
+<body>
+    
+</body>
+</html>

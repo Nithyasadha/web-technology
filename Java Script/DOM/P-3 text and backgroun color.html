@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">JSPIDERS</h1>
+    <button id="clr">CHANGE COLOR</button>
+    <button id="bg">CHANGE BG COLOR</button>
+    <script>
+        let clrBtn=document.getElementById("clr")
+        clrBtn.addEventListener("click",()=>
+    {
+        setTimeout(()=>
+    {
+        document.getElementById("h1").style.color="red"
+    },2000)
+    })
+    let bgBtn=document.getElementById("bg")
+    bgBtn.addEventListener("click",()=>
+{
+    setInterval(()=>
+{
+    let bgclr=document.getElementById("h1").style.background
+    if(bgclr=="pink")
+{
+    document.getElementById("h1").style.background="yellow"
+}
+else
+{
+    document.getElementById("h1").style.background="blue"
+}
+    let red=math.trunc(math.random()*255)
+    let green=math.trunc(math.random()*255)
+    let blue=math.trunc(math.random()*255)
+    document.getElementById("h1").style.background=`rgb(${red},${green},${blue})`
+
+},1000)
+})
+    </script>
+</body>
+</html>

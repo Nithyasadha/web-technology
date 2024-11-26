@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    let amt=4800;
+    2000*2=4000;
+    500*1=500;
+    200*1=200;
+    100*1=100;
+    <!--<script>
+        "use strict";
+        main();
+        function main()
+        {
+            let amount=4800;
+            let count2000=Math.trunc(amount/2000);
+            console.log('2000*${count 2000}=${2000*count2000}');
+            amount=amount%2000;
+            let count500=Math.trunc(amount/500);
+            console.log(`500*${count500}=${500*count500}`);
+            amount=amount%500;
+            let count200=Math.trunc(amount/200);
+            console.log(`200*${count200}=${200*count200}`);
+            amount=amount%200;
+            let count100=Math.trunc(amount/100);
+            console.log(`100*${count100}=${100*count100}`);
+        }
+    </script>-->
+    <script>
+        {
+            let amt=Number(prompt("Enter amount:"));
+            if(amt>=2000)
+        {
+            let count2000=Math.trunc(amt/2000);
+            console.log('2000*${count 2000}=${2000*count2000}');
+            amt=amt%2000;
+
+        }
+        if(amt>=500)
+        {
+            let count500=Math.trunc(amt/500);
+            console.log(`500*${count500}=${500*count500}`);
+            amt=amt%500;   
+        }
+        if(amt>=200)
+        {
+            let count200=Math.trunc(amt/200);
+            console.log(`200*${count200}=${200*count200}`);
+            amt=amt%200;  
+        }
+        if(amt>=100)
+        {
+            let count100=Math.trunc(amt/100);
+            console.log(`100*${count100}=${100*count100}`);
+        }
+        }
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

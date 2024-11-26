@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script>
+        m1();
+        function m1()
+        {
+            console.log("main starts!!");
+            m2();
+            console.log("main ends!!");
+            return;
+        }
+        function m2()
+        {
+            console.log("m2 starts");
+            console.log("m2 ends!!");
+            return;
+        }
+
+    </script>-->
+    <!--<script>
+        m1();
+        function m1()
+        {
+            console.log("main starts!!");
+            m2();
+            console.log("main ends!!");
+            return;
+        }
+        function m2()
+        {
+            console.log("m2 starts");
+            return;
+            console.log("m2 ends!!");
+           
+        }
+
+    </script>-->
+    <script>
+        main();
+        function main()
+        {
+            let i=m1();
+            console.log(`i value is ${i}`);
+            let j=m1()*20;
+            console.log(`j value is ${j}`);
+            m1();
+            console.log(m1())
+            {
+                m1()
+                {
+                    console.log("m1 is executed")
+                    return 10;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

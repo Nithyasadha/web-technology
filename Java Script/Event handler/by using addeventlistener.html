@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+        }
+        div
+        {
+           background-color: yellow;
+           text-align:center;
+           padding: 20px;
+        }
+        div>h1
+        {
+            margin-bottom: 10px;
+        }
+        div>button:hover
+        {
+            cursor:pointer;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1 id="display">Message</h1>
+        <button id="btn">click here</button>
+    </div>
+    <script>
+        let clickbtn=document.getElementById('btn');
+        clickbtn.addEventListener("click", function()
+        {
+            let h1Tag=document.getElementById('display');
+            h1Tag.textContent="JS";
+        });
+    </script>
+
+    
+</body>
+</html>

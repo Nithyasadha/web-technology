@@ -1,0 +1,65 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a=10
+        let b=20
+        console.log(a,b);
+        let main=this;
+        console.log(main);
+        function m1()
+        {
+            console.log(this);
+        }
+        m1();
+        let greet = function()
+        {
+            console.log(this);
+        }
+        greet();
+        let welcome=()=>
+        {
+            console.log(this);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>-->
+
+
+                                            <!--this keyword-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student={
+            stuId:101,
+            firstName:"thigalini",
+            birthyear:2000,
+            calcAge:function()
+            {
+                let d1=new Date();
+                let currentYear=d1.getFullYear();
+                let age=currentYear-this.birthyear;
+                console.log(age);
+            }
+        }
+        console.log(student);
+        console.log(student.calcAge);
+        student.calcAge();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

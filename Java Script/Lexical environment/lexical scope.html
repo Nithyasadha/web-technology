@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outer()
+        {
+            var a=10;
+            function inner()
+            {
+                var b=20;
+                console.log(a);
+            }
+            inner();
+        }
+        outer();
+    </script>
+</head>
+<body>
+    
+</body>
+
+</html>
+
+
+                            <!-- scope chain closure-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inner()
+        {
+            var a=10;
+            function inner()
+            {
+                var b=20;
+                console.log(a);
+            }
+            return inner;
+        }
+        let main=outer();
+        main();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

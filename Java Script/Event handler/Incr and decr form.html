@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+        }
+        div
+        {
+           background-color: rgb(255, 94, 0);
+           text-align:center;
+           padding: 20px;
+        }
+        div>span
+        {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 20px;
+            
+        }
+        div>button
+        {
+            padding: 10px;
+            font-size: 20px;
+        }
+        div>button:hover
+        {
+            cursor:pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <button id="decnt">Dec</button>
+        <span id="display">COUNT</span>
+        <button id="inccnt">Inc</button>
+    </div>
+    <script>
+        let countbtn=document.getElementById('display');
+        let decbtn=document.getElementById('decnt');
+        let incbtn=document.getElementById('inccnt');
+        let count=0;
+        countbtn.textContent=count;
+
+        function increament()
+        {
+          count++;
+          countbtn.textContent=count;
+        } 
+        function decreament()
+        {
+        if(count>1)
+        {
+            count--;
+            countbtn.textContent=count;
+
+        }
+          
+        else
+        {
+            countbtn.textContent=1;
+        }
+    }
+        incbtn.addEventListener('click',increament);
+        decbtn.addEventListener('click',decreament);
+
+
+    </script> 
+</html>

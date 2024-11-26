@@ -1,0 +1,73 @@
+                                  <!--CALL METHOD-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let travels_1={id:"or101",tname:"orange",bookings:[]};
+        let travels_2={id:"vr104",tname:"VRL",bookings:[]};
+        let travels_3={id:"sr106",tname:"SRS",bookings:[]};
+        let book = function(pname,seatNo)
+        {
+            console.log(`${pname}booked seat in ${this.tname})travels, with seat number ${seatNo}`);
+        }
+        book();
+        book.call(travels_1,"Dhigalini",18);
+        book.call(travels_2,"Mehul",20);
+        book.call(travels_3,"Rudhresh",19);
+</script>
+</head>
+<body>
+    
+</body>
+</html>-->
+                       
+                                   <!--APPLY METHOD-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  //error
+    <title>Document</title>
+    <script>
+        let travels_1={id:"or101",tname:"orange",bookings:[]};
+        let travels_2={id:"vr104",tname:"VRL",bookings:[]};
+        let travels_3={id:"sr106",tname:"SRS",bookings:[]};
+        let book = function(pname,seatNo)
+    {
+        let obj={passenger:`${pname},${seatNo},${this.tname}`};
+        this.bookings.push(obj);
+    }
+    console.log(travels_1,bookings);
+    book.apply(travels_1,['dhilip',12]);
+    console.log(travels_1.bookings);
+    console.log(travels_1.bookings.length);-->
+
+                                   <!--Bind method-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let travels_1={id:"or101",tname:"orange",bookings:[]};                              //error
+        let travels_2={id:"vr104",tname:"VRL",bookings:[]};
+        let travels_3={id:"sr106",tname:"SRS",bookings:[]};
+        let book = function(pname,seatNo)
+    {
+        let obj={passenger:`${pname},${seatNo},${this.tname}`};
+        this.bookings.push(obj);
+    }
+    console.log(travels_1.bookings);
+    let a=book.bind(travels_1,'Mehul');
+    a(18);
+    a(19);
+    a(20);
+    a(21);
+    console.log(travels_1.bookings);
+    console.log(travels_1.bookings.length);
+    
